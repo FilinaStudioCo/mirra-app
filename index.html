@@ -1,734 +1,332 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIRRA Recovery — AI-Powered Post-Cesarean Wound Monitoring</title>
-<meta name="description" content="MIRRA Recovery closes the post-discharge detection gap with AI-driven wound monitoring designed specifically for post-cesarean care. Early detection. Better outcomes.">
-<meta property="og:title" content="MIRRA Recovery — AI-Powered Post-Cesarean Wound Monitoring">
-<meta property="og:description" content="Closing the post-discharge detection gap with AI-driven wound monitoring for postpartum women.">
-<meta property="og:image" content="assets/hero.png">
-<meta property="og:type" content="website">
-
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300..700&display=swap" rel="stylesheet">
-
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>MIRRA Recovery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ===== HEADER ===== -->
-<header class="header" id="header">
-  <div class="container header-inner">
-    <a href="#" class="logo" aria-label="MIRRA Recovery home">
-      <svg width="36" height="36" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-        <!-- Stylised M with a heart/arc at top -->
-        <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-        <path d="M8 26V12l10 9 10-9v14" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        <path d="M14 16 C14 13, 22 13, 22 16" stroke="var(--color-accent-rose)" stroke-width="2" stroke-linecap="round" fill="none"/>
+<!-- APP NAV -->
+<header id="app-nav" class="app-nav hidden">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <svg width="28" height="28" viewBox="0 0 36 36" fill="none">
+        <rect width="36" height="36" rx="8" fill="#0b7a82"/>
+        <path d="M8 26V12l10 9 10-9v14" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 16 C14 13, 22 13, 22 16" stroke="#e8a0b4" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <span class="logo-wordmark">MIRRA<span class="logo-sub"> Recovery</span></span>
-    </a>
-
-    <nav class="nav" aria-label="Main navigation">
-      <a href="#problem" class="nav-link">The Problem</a>
-      <a href="#solution" class="nav-link">Our Solution</a>
-      <a href="#how-it-works" class="nav-link">How It Works</a>
-      <a href="#market" class="nav-link">Market</a>
-      <a href="#founder" class="nav-link">Founder</a>
-      <a href="#careers" class="nav-link">Careers</a>
-      <a href="#contact" class="nav-link nav-link--cta">Get Early Access</a>
-    </nav>
-
-    <div class="header-actions">
-      <button data-theme-toggle aria-label="Switch to dark mode" class="theme-toggle">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <span class="nav-wordmark">MIRRA</span>
     </div>
-  </div>
-
-  <!-- Mobile nav -->
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="#problem" class="mobile-nav-link">The Problem</a>
-    <a href="#solution" class="mobile-nav-link">Our Solution</a>
-    <a href="#how-it-works" class="mobile-nav-link">How It Works</a>
-    <a href="#market" class="mobile-nav-link">Market</a>
-    <a href="#founder" class="mobile-nav-link">Founder</a>
-    <a href="#careers" class="mobile-nav-link">Careers</a>
-    <a href="#contact" class="mobile-nav-link mobile-nav-link--cta">Get Early Access</a>
+    <button data-theme-toggle class="theme-toggle" aria-label="Toggle theme">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
-<section class="hero" id="hero">
-  <div class="hero-bg">
-    <img src="assets/hero.png" alt="Medical professional using MIRRA Recovery app in a postpartum care setting" class="hero-img" loading="eager">
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="container hero-content">
-    <div class="hero-badge">
-      <span class="badge-dot"></span>
-      AI-Powered Digital Health · EU MDR Pathway
-    </div>
-    <h1 class="hero-headline">
-      Closing the<br>
-      <em>post-discharge gap</em><br>
-      in maternal care
-    </h1>
-    <p class="hero-sub">
-      Every year, 12,000–24,000 women in Germany develop post-cesarean wound infections 
-      <strong>after they've left hospital.</strong> MIRRA Recovery detects complications in 24–48 hours — 
-      not 3–7 days later.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn--primary">Request Early Access</a>
-      <a href="#solution" class="btn btn--ghost">Learn how it works</a>
-    </div>
-    <div class="hero-stats">
-      <div class="stat">
-        <span class="stat-value">21.1%</span>
-        <span class="stat-label">of all births globally are cesarean sections</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-value">3–20%</span>
-        <span class="stat-label">post-cesarean surgical site infection rate</span>
-      </div>
-      <div class="stat-divider"></div>
-      <div class="stat">
-        <span class="stat-value">€19,008</span>
-        <span class="stat-label">median cost of an SSI-complicated hospital case</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== PROBLEM ===== -->
-<section class="section section--light" id="problem">
-  <div class="container">
-    <div class="section-label">The Problem</div>
-    <h2 class="section-title">A critical gap between discharge and detection</h2>
-    <p class="section-intro">
-      Post-cesarean surgical site infections typically manifest 4–10 days after surgery — 
-      well after the standard 2–4 day inpatient stay. New mothers go home before complications appear.
-    </p>
-
-    <div class="timeline-grid">
-      <div class="timeline-item">
-        <div class="timeline-marker timeline-marker--blue">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-        </div>
-        <div class="timeline-content">
-          <h3>Day 2–4</h3>
-          <p>Patient discharged from hospital. Wound appears normal.</p>
-        </div>
-      </div>
-      <div class="timeline-connector"></div>
-      <div class="timeline-item">
-        <div class="timeline-marker timeline-marker--amber">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-        </div>
-        <div class="timeline-content">
-          <h3>Day 4–10</h3>
-          <p><strong>Detection gap.</strong> SSI develops undetected. New mother is alone, sleep-deprived, focused on newborn care.</p>
-        </div>
-      </div>
-      <div class="timeline-connector"></div>
-      <div class="timeline-item">
-        <div class="timeline-marker timeline-marker--rose">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <div class="timeline-content">
-          <h3>Day 10–14</h3>
-          <p>Infection severe enough for self-referral or readmission. Diagnosis delayed 3–7 days — worsening outcomes.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="problem-cards">
-      <div class="problem-card">
-        <div class="problem-card-icon problem-card-icon--blue">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <h3>Maternal health burden</h3>
-        <p>SSIs exacerbate postpartum depression, impede maternal bonding, and extend recovery. Women deserve better monitoring during their most vulnerable weeks.</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-card-icon problem-card-icon--amber">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-        </div>
-        <h3>Healthcare system costs</h3>
-        <p>SSI-complicated cases cost €19,008 vs €9,040 for uncomplicated cases. Readmissions average €7,962 per episode. Up to 24,000 cases per year in Germany alone.</p>
-      </div>
-      <div class="problem-card">
-        <div class="problem-card-icon problem-card-icon--rose">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-        </div>
-        <h3>No condition-specific tools</h3>
-        <p>Existing digital wound monitoring platforms target chronic wounds or general postoperative populations. None are designed specifically for post-cesarean SSI surveillance with a postpartum-tailored user experience.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== SOLUTION ===== -->
-<section class="section section--white" id="solution">
-  <div class="container">
-    <div class="solution-layout">
-      <div class="solution-text">
-        <div class="section-label">Our Solution</div>
-        <h2 class="section-title">AI-powered monitoring built <em>exclusively</em> for post-cesarean care</h2>
-        <p class="solution-desc">
-          MIRRA Recovery is the first digital health platform combining a condition-specific deep learning 
-          algorithm, multimodal symptom and image analysis, and a postpartum-tailored user experience — 
-          designed to detect SSIs 24–48 hours after clinical manifestation.
-        </p>
-
-        <ul class="feature-list" role="list">
-          <li class="feature-item">
-            <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934a8 8 0 0 1 0 2.132M6.65 4.84a10 10 0 0 1 11.71 1.5M4.84 6.65A10 10 0 0 0 3.462 18.54M10.934 20.188a8 8 0 0 0 2.132 0M18.188 19.24a10 10 0 0 1-7.25 1.65"/></svg>
-            </div>
-            <div>
-              <strong>Post-cesarean-specific AI</strong> — trained exclusively on annotated wound photographs from cesarean cohorts, not generic wound datasets
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
-            </div>
-            <div>
-              <strong>Multimodal analysis</strong> — combines wound image AI with daily symptom check-ins for higher sensitivity and specificity
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <strong>Postpartum-tailored UX</strong> — addresses body image sensitivity, sleep deprivation context, and newborn care demands
-            </div>
-          </li>
-          <li class="feature-item">
-            <div class="feature-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <strong>EU MDR Class IIa regulatory pathway</strong> — CE marking and DiGA listing targeted by Month 30–36
-            </div>
-          </li>
-        </ul>
-
-        <div class="target-badge">
-          <span class="target-label">Diagnostic target</span>
-          <div class="target-metrics">
-            <div class="target-metric">
-              <span class="metric-val">≥80%</span>
-              <span class="metric-desc">Sensitivity</span>
-            </div>
-            <div class="target-metric">
-              <span class="metric-val">≥75%</span>
-              <span class="metric-desc">Specificity</span>
-            </div>
-            <div class="target-metric">
-              <span class="metric-val">≥0.85</span>
-              <span class="metric-desc">AUC-ROC</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="solution-visual">
-        <img src="assets/app-mockup.png" alt="MIRRA Recovery app interface showing AI wound assessment dashboard with recovery progress and status indicators" class="app-mockup-img" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== HOW IT WORKS ===== -->
-<section class="section section--soft" id="how-it-works">
-  <div class="container">
-    <div class="section-label">How It Works</div>
-    <h2 class="section-title">From hospital discharge to confident recovery</h2>
-    <p class="section-intro">A 14-day monitoring journey designed around a new mother's real-life constraints.</p>
-
-    <div class="steps-grid">
-      <div class="step-card">
-        <div class="step-number">01</div>
-        <h3>Onboarding at discharge</h3>
-        <p>Clinical staff enrol patients before leaving hospital. The app is configured with the patient's wound profile and care pathway.</p>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="step-card">
-        <div class="step-number">02</div>
-        <h3>Daily wound photo + symptom check</h3>
-        <p>Patients upload a guided photo and answer a brief symptom checklist each day. Designed to take under 2 minutes.</p>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="step-card">
-        <div class="step-number">03</div>
-        <h3>AI analysis & risk score</h3>
-        <p>MIRRA's deep learning model analyses each submission and generates a risk score combining image findings with symptom data.</p>
-      </div>
-      <div class="step-arrow">→</div>
-      <div class="step-card">
-        <div class="step-number">04</div>
-        <h3>Clinician alert & action</h3>
-        <p>Elevated risk scores trigger immediate notifications to the clinical team — enabling early intervention before symptoms become severe.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== MARKET ===== -->
-<section class="section section--white" id="market">
-  <div class="container">
-    <div class="section-label">Market Opportunity</div>
-    <h2 class="section-title">A time-sensitive strategic window</h2>
-    <p class="section-intro">
-      No direct competitor currently holds CE marking or DiGA listing for post-cesarean wound monitoring. 
-      That window is estimated at 12–24 months.
-    </p>
-
-    <div class="market-grid">
-      <div class="market-stat-card market-stat-card--primary">
-        <div class="market-stat-value">$4.58B</div>
-        <div class="market-stat-label">Global AI wound monitoring market by 2033</div>
-        <div class="market-stat-note">Up from $1.68B in 2024 — 13.4% CAGR</div>
-      </div>
-      <div class="market-stat-card">
-        <div class="market-stat-value">€35–50M</div>
-        <div class="market-stat-label">German SAM for post-surgical AI wound monitoring</div>
-        <div class="market-stat-note">Conservative serviceable addressable market</div>
-      </div>
-      <div class="market-stat-card">
-        <div class="market-stat-value">€1.5–2.5M</div>
-        <div class="market-stat-label">Obtainable market by Year 5</div>
-        <div class="market-stat-note">Under conservative projection assumptions</div>
-      </div>
-      <div class="market-stat-card">
-        <div class="market-stat-value">Year 3</div>
-        <div class="market-stat-label">Projected break-even point</div>
-        <div class="market-stat-note">Dual revenue model: institutional + DiGA per-episode</div>
-      </div>
-    </div>
-
-    <div class="roadmap-section">
-      <h3 class="roadmap-title">Development Roadmap</h3>
-      <div class="roadmap-track">
-        <div class="roadmap-phase roadmap-phase--active">
-          <div class="roadmap-phase-label">Phase 0</div>
-          <div class="roadmap-phase-title">Validation</div>
-          <div class="roadmap-phase-desc">Patient acceptance interviews, stakeholder mapping, rapid market validation</div>
-          <div class="roadmap-phase-time">Now → Month 6</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="roadmap-phase-label">Phase 1</div>
-          <div class="roadmap-phase-title">Pilot</div>
-          <div class="roadmap-phase-desc">AI model development, 2 university hospital pilots, clinical champion engagement</div>
-          <div class="roadmap-phase-time">Month 6 → 18</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="roadmap-phase-label">Phase 2</div>
-          <div class="roadmap-phase-title">Validation Study</div>
-          <div class="roadmap-phase-desc">Prospective n=300–500 study, regulatory submission, CE marking process</div>
-          <div class="roadmap-phase-time">Month 18 → 30</div>
-        </div>
-        <div class="roadmap-phase">
-          <div class="roadmap-phase-label">Phase 3</div>
-          <div class="roadmap-phase-title">Market Entry</div>
-          <div class="roadmap-phase-desc">CE mark achieved, DiGA listing, 5–7 institutional partnerships</div>
-          <div class="roadmap-phase-time">Month 30 → 36</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== OUTCOMES ===== -->
-<section class="section section--soft" id="outcomes">
-  <div class="container">
-    <div class="section-label">Expected Impact</div>
-    <h2 class="section-title">Better outcomes at every level</h2>
-
-    <div class="outcomes-grid">
-      <div class="outcome-card outcome-card--patients">
-        <div class="outcome-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
-        </div>
-        <h3>For patients</h3>
-        <ul role="list" class="outcome-list">
-          <li>Earlier detection — 3–5 days sooner</li>
-          <li>Reduced readmission rates by 15–25%</li>
-          <li>Less antibiotic exposure (40% reduction target)</li>
-          <li>Faster maternal bonding and recovery</li>
-        </ul>
-      </div>
-      <div class="outcome-card outcome-card--hospitals">
-        <div class="outcome-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-        </div>
-        <h3>For hospitals</h3>
-        <ul role="list" class="outcome-list">
-          <li>€1,200–1,800 cost savings per patient</li>
-          <li>Reduced readmission burden</li>
-          <li>Quality indicator improvements</li>
-          <li>DiGA-reimbursed, low integration burden</li>
-        </ul>
-      </div>
-      <div class="outcome-card outcome-card--system">
-        <div class="outcome-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-        </div>
-        <h3>For the healthcare system</h3>
-        <ul role="list" class="outcome-list">
-          <li>Addresses systematic underfunding (€1,534/patient)</li>
-          <li>Reduces avoidable antibiotic prescriptions</li>
-          <li>Scalable post-discharge monitoring model</li>
-          <li>Evidence base for payers and policymakers</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOUNDER ===== -->
-<section class="section section--white" id="founder">
-  <div class="container">
-    <div class="founder-layout">
-      <div class="founder-photo-wrap">
-        <img src="assets/founder.png" alt="Kim Antonette Lazaro, Founder of MIRRA Recovery" class="founder-photo" loading="lazy">
-
-      </div>
-      <div class="founder-text">
-        <div class="section-label">The Founder</div>
-        <h2 class="section-title">Built by a nurse who has seen this problem firsthand</h2>
-
-        <blockquote class="founder-quote">
-          &ldquo;I have spent over 12 years in operating rooms supporting surgical teams. I have seen what happens when post-discharge complications go undetected. MIRRA Recovery is the tool I always wished we had.&rdquo;
-        </blockquote>
-
-        <div class="founder-name-block">
-          <span class="founder-name">Kim Antonette Lazaro</span>
-          <span class="founder-title">Founder &amp; CEO, MIRRA Recovery</span>
-        </div>
-
-        <p class="founder-bio">
-          Kim is a Registered Nurse with 12+ years of clinical experience in operating rooms across Germany and internationally, specialising in general, women&rsquo;s, laparoscopic, and robotic surgery. She currently works at University Hospital Leipzig as an OR nurse in General, Children&rsquo;s and Women&rsquo;s Surgery, Gynaecology &amp; Obstetrics — placing her directly at the intersection of the problem MIRRA solves.
-        </p>
-        <p class="founder-bio">
-          She is pursuing a Master&rsquo;s degree in Entrepreneurship in Digital Health, combining deep clinical insight with training in health technology innovation, medical device regulatory affairs, and digital health entrepreneurship. Her academic work on MIRRA Recovery reflects years of frontline observation of the post-discharge detection gap.
-        </p>
-
-        <div class="founder-credentials">
-          <div class="credential">
-            <div class="credential-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-            </div>
-            <div>
-              <strong>MSc Entrepreneurship in Digital Health</strong><br>
-              <span>Medical University of Graz — in progress</span>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-            </div>
-            <div>
-              <strong>OR Registered Nurse</strong><br>
-              <span>University Hospital Leipzig · 2022 – present</span>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-            </div>
-            <div>
-              <strong>12+ Years Clinical Experience</strong><br>
-              <span>Germany, Philippines, Hong Kong SAR — open, endoscopic &amp; robotic surgery</span>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            </div>
-            <div>
-              <strong>ESNO Associate Member</strong><br>
-              <span>European Specialist Nurses Organisation &mdash; since September 2025</span>
-            </div>
-          </div>
-          <div class="credential">
-            <div class="credential-icon">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            </div>
-            <div>
-              <strong>Licenses &amp; Certifications</strong><br>
-              <span>Clinical Research / Study Nurse (Uniklinikum Köln) &middot; Infusion Therapy Nurse (Infusion Nurses Society) &middot; Registered Nurse — New York State (NCSBN, 2024) &middot; Registered Nurse — Philippines (PRC, 2014) &middot; Gesundheits- und Krankenschwester — Germany &middot; Deutsch B2 (ÖSD)</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== CAREERS ===== -->
-<section class="section section--light" id="careers">
-  <div class="container">
-    <div class="section-label">Careers</div>
-    <h2 class="section-title">Join the team building the future of maternal care</h2>
-    <p class="section-intro">
-      MIRRA Recovery is an early-stage digital health startup. We are looking for mission-driven people who want to make a real difference in women's health — across technology, clinical practice, and operations.
-    </p>
-
-    <div class="careers-grid">
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--tech">Technology</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Machine Learning Engineer</h3>
-        <p class="career-desc">Build and validate the AI models at the core of MIRRA — including wound image classification, anomaly detection, and risk scoring. Experience with medical imaging or EU MDR data requirements is a plus.</p>
-        <ul class="career-skills">
-          <li>Python · PyTorch / TensorFlow</li>
-          <li>Computer vision & image segmentation</li>
-          <li>Regulatory-grade model validation</li>
-        </ul>
-      </div>
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--tech">Technology</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Mobile App Developer</h3>
-        <p class="career-desc">Design and develop the patient-facing mobile application — the primary interface for wound photo submission, symptom logging, and recovery tracking. Cross-platform experience preferred.</p>
-        <ul class="career-skills">
-          <li>React Native or Flutter</li>
-          <li>UX for health / accessibility</li>
-          <li>API integration & offline support</li>
-        </ul>
-      </div>
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--clinical">Clinical</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Clinical Research Coordinator</h3>
-        <p class="career-desc">Support the design and execution of MIRRA's clinical validation studies. Work directly with hospital partners to coordinate data collection, IRB submissions, and patient safety protocols.</p>
-        <ul class="career-skills">
-          <li>Clinical trial / study coordination</li>
-          <li>Obstetrics or surgical nursing background</li>
-          <li>GCP certification preferred</li>
-        </ul>
-      </div>
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--clinical">Clinical</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Medical Advisor</h3>
-        <p class="career-desc">Provide clinical guidance on product development, diagnostic accuracy thresholds, and regulatory submissions. Ideal for an OB/GYN, midwife, or wound care specialist with an interest in digital health innovation.</p>
-        <ul class="career-skills">
-          <li>OB/GYN, midwifery, or wound care</li>
-          <li>EU MDR / clinical evidence familiarity</li>
-          <li>Part-time advisory role</li>
-        </ul>
-      </div>
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--business">Business</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Regulatory Affairs Specialist</h3>
-        <p class="career-desc">Lead MIRRA's EU MDR Class IIa certification pathway and DiGA application process. You will work closely with the founder to build the technical file, manage notified body communication, and ensure product compliance.</p>
-        <ul class="career-skills">
-          <li>EU MDR / DiGA regulatory experience</li>
-          <li>Technical file & QMS preparation</li>
-          <li>German language a strong plus</li>
-        </ul>
-      </div>
-
-      <div class="career-card">
-        <div class="career-card-header">
-          <div class="career-tag career-tag--business">Business</div>
-          <div class="career-status career-status--open">Open</div>
-        </div>
-        <h3 class="career-title">Partnerships & Growth Lead</h3>
-        <p class="career-desc">Establish relationships with hospital systems, maternity clinics, and health insurers (GKV/PKV) in Germany. Drive institutional adoption and support grant and funding applications.</p>
-        <ul class="career-skills">
-          <li>Healthcare sales or partnerships</li>
-          <li>German hospital / payer landscape</li>
-          <li>Startup growth experience</li>
-        </ul>
-      </div>
-
-    </div>
-
-    <div class="careers-open-apply">
-      <div class="careers-open-apply-inner">
-        <div class="careers-open-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-        </div>
-        <div class="careers-open-text">
-          <h3>Don't see your role?</h3>
-          <p>We welcome expressions of interest from clinical advisors, investors, and anyone passionate about closing the gap in maternal care. Reach out and tell us how you'd like to contribute.</p>
-        </div>
-        <a href="#contact" class="btn btn--primary">Get in Touch</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- ===== CTA / CONTACT ===== -->
-<section class="section section--dark" id="contact">
-  <div class="container">
-    <div class="cta-layout">
-      <div class="cta-text">
-        <div class="section-label section-label--light">Get Involved</div>
-        <h2 class="cta-title">Ready to close the gap?</h2>
-        <p class="cta-desc">
-          We're currently in Phase 0, seeking clinical partners, healthcare investors, 
-          and hospital systems interested in early pilot participation. 
-          If you're a clinician, hospital administrator, or investor — we'd love to talk.
-        </p>
-        <div class="cta-partner-types">
-          <div class="partner-type">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.49 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.4 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.5a16 16 0 0 0 6 6l.82-.82a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.34 16h.58a2 2 0 0 1 0 .92z"/></svg>
-            Hospital clinical leads &amp; obstetricians
-          </div>
-          <div class="partner-type">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            Healthcare investors &amp; MedTech VCs
-          </div>
-          <div class="partner-type">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-            University hospitals for pilot participation
-          </div>
-          <div class="partner-type">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            Post-cesarean patients for Phase 0 research
-          </div>
-        </div>
-      </div>
-
-      <div class="contact-form-wrap">
-        <form class="contact-form" id="contactForm" action="https://formspree.io/f/xpwzgvqk" method="POST" novalidate>
-          <input type="hidden" name="_replyto" value="bykimantonette@gmail.com">
-          <input type="hidden" name="_subject" value="New contact from MIRRA Recovery landing page">
-          <h3 class="form-title">Express your interest</h3>
-          <div class="form-group">
-            <label for="name">Full name</label>
-            <input type="text" id="name" name="name" placeholder="Dr. Jane Smith" required autocomplete="name">
-          </div>
-          <div class="form-group">
-            <label for="email">Email address</label>
-            <input type="email" id="email" name="email" placeholder="jane@hospital.de" required autocomplete="email">
-          </div>
-          <div class="form-group">
-            <label for="role">Your role</label>
-            <select id="role" name="role" required>
-              <option value="" disabled selected>Select your role</option>
-              <option>Clinician / Obstetrician</option>
-              <option>Hospital Administrator</option>
-              <option>Healthcare Investor</option>
-              <option>Researcher / Academic</option>
-              <option>Patient / Post-Cesarean</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="message">Message (optional)</label>
-            <textarea id="message" name="message" rows="3" placeholder="Tell us about your interest or institution..."></textarea>
-          </div>
-          <button type="submit" class="btn btn--form-submit">Send Interest</button>
-          <div class="form-success" id="formSuccess" aria-live="polite" hidden>
-            Thank you — we'll be in touch within 48 hours.
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== FOOTER ===== -->
-<footer class="footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <a href="#" class="logo" aria-label="MIRRA Recovery">
-        <svg width="28" height="28" viewBox="0 0 36 36" fill="none" aria-hidden="true">
-          <rect width="36" height="36" rx="8" fill="var(--color-primary)"/>
-          <path d="M8 26V12l10 9 10-9v14" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-          <path d="M14 16 C14 13, 22 13, 22 16" stroke="var(--color-accent-rose)" stroke-width="2" stroke-linecap="round" fill="none"/>
-        </svg>
-        <span class="logo-wordmark">MIRRA<span class="logo-sub"> Recovery</span></span>
-      </a>
-      <p class="footer-tagline">AI-Powered Post-Cesarean Wound Monitoring</p>
-      <p class="footer-disclaimer">
-        MIRRA Recovery is currently in pre-regulatory development. Not yet CE marked. 
-        Not for clinical use. EU MDR Class IIa certification in progress.
-      </p>
-    </div>
-    <div class="footer-links">
-      <div class="footer-col">
-        <h4>Product</h4>
-        <a href="#solution">Our Solution</a>
-        <a href="#how-it-works">How It Works</a>
-        <a href="#market">Market Opportunity</a>
-        <a href="#outcomes">Expected Impact</a>
-      </div>
-      <div class="footer-col">
-        <h4>Company</h4>
-        <a href="#founder">About the Founder</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#contact">Invest</a>
-        <a href="#contact">Partner With Us</a>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="container footer-bottom-inner">
-      <span>© 2026 MIRRA Recovery. All rights reserved.</span>
-    </div>
-  </div>
-</footer>
-
-<script src="insights.js"></script>
-<script src="app.js"></script>
-<!-- ===== PASSWORD GATE ===== -->
-<div id="passwordGate" class="gate-overlay" aria-modal="true" role="dialog" aria-label="Site access">
-  <div class="gate-card">
-    <div class="gate-logo">
-      <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-        <rect width="40" height="40" rx="10" fill="#1a6faa"/>
-        <text x="50%" y="56%" dominant-baseline="middle" text-anchor="middle" fill="white" font-size="22" font-weight="700" font-family="Georgia, serif">M</text>
-      </svg>
-    </div>
-    <h1 class="gate-title">MIRRA Recovery</h1>
-    <p class="gate-subtitle">This site is private. Please enter the access password to continue.</p>
-    <form id="gateForm" class="gate-form" novalidate>
-      <div class="gate-input-wrap">
-        <input type="password" id="gatePassword" class="gate-input" placeholder="Enter password" autocomplete="current-password" aria-label="Password"/>
-        <button type="button" id="gateToggle" class="gate-eye" aria-label="Show password">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="eyeIcon"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-        </button>
-      </div>
-      <div class="gate-error" id="gateError" hidden>Incorrect password. Please try again.</div>
-      <button type="submit" class="gate-submit">Access Site</button>
-    </form>
-    <p class="gate-note">MIRRA Recovery &mdash; Confidential</p>
+<!-- SPLASH -->
+<div id="view-splash" class="view active">
+  <div class="splash-wrap">
+    <svg width="80" height="80" viewBox="0 0 36 36" fill="none" class="splash-logo">
+      <rect width="36" height="36" rx="10" fill="#0b7a82"/>
+      <path d="M8 26V12l10 9 10-9v14" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M14 16 C14 13, 22 13, 22 16" stroke="#e8a0b4" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    <h1 class="splash-title">MIRRA Recovery</h1>
+    <p class="splash-sub">AI-powered daily check-ins, smart recovery tips, and early warning — right from home.</p>
+    <button class="btn-primary" onclick="startOnboarding()">Get started</button>
+    <p class="splash-note">Demo prototype · Not medical advice</p>
   </div>
 </div>
 
+<!-- ONBOARD 1 — Name -->
+<div id="view-onboard-1" class="view">
+  <div class="onboard-wrap">
+    <div class="progress-bar"><div class="progress-fill" style="width:25%"></div></div>
+    <p class="step-label">Step 1 of 4</p>
+    <h2 class="onboard-title">What's your name?</h2>
+    <p class="onboard-desc">We'll use this to personalise your experience.</p>
+    <div class="form-group">
+      <label class="form-label" for="patient-name">Your first name</label>
+      <input id="patient-name" type="text" class="form-input" placeholder="e.g. Sarah" autocomplete="given-name">
+    </div>
+    <button class="btn-primary btn-full" onclick="onboard1Next()">Continue</button>
+  </div>
+</div>
+
+<!-- ONBOARD 2 — Surgery date -->
+<div id="view-onboard-2" class="view">
+  <div class="onboard-wrap">
+    <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
+    <p class="step-label">Step 2 of 4</p>
+    <h2 class="onboard-title">When was your caesarean?</h2>
+    <p class="onboard-desc">This helps us personalise your recovery tips by day.</p>
+    <div class="form-group">
+      <label class="form-label" for="surgery-date">Surgery date</label>
+      <input id="surgery-date" type="date" class="form-input">
+    </div>
+    <button class="btn-primary btn-full" onclick="onboard2Next()">Continue</button>
+  </div>
+</div>
+
+<!-- ONBOARD 3 — Risk factors -->
+<div id="view-onboard-3" class="view">
+  <div class="onboard-wrap">
+    <div class="progress-bar"><div class="progress-fill" style="width:75%"></div></div>
+    <p class="step-label">Step 3 of 4</p>
+    <h2 class="onboard-title">Any of these apply?</h2>
+    <p class="onboard-desc">Select anything that applies. This helps personalise your monitoring.</p>
+    <div class="rf-list">
+      <label class="rf-item"><input type="checkbox" id="rf-emergency" class="rf-check"><span class="rf-label">Emergency caesarean</span></label>
+      <label class="rf-item"><input type="checkbox" id="rf-diabetes" class="rf-check"><span class="rf-label">Diabetes (any type)</span></label>
+      <label class="rf-item"><input type="checkbox" id="rf-bmi" class="rf-check"><span class="rf-label">BMI ≥ 30</span></label>
+      <label class="rf-item"><input type="checkbox" id="rf-immune" class="rf-check"><span class="rf-label">Immunosuppressed / on steroids</span></label>
+    </div>
+    <button class="btn-primary btn-full" onclick="onboard3Next()">Continue</button>
+  </div>
+</div>
+
+<!-- ONBOARD 4 — How it works -->
+<div id="view-onboard-4" class="view">
+  <div class="onboard-wrap">
+    <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+    <p class="step-label">Step 4 of 4</p>
+    <h2 class="onboard-title">Here's how MIRRA works</h2>
+    <div class="how-list">
+      <div class="how-item"><span class="how-icon">📸</span><div><strong>Daily photo</strong><br>Take a quick guided wound photo each day.</div></div>
+      <div class="how-item"><span class="how-icon">✅</span><div><strong>Quick check-in</strong><br>Answer 4 short symptom questions.</div></div>
+      <div class="how-item"><span class="how-icon">🤖</span><div><strong>AI analysis</strong><br>Your results are reviewed instantly.</div></div>
+      <div class="how-item"><span class="how-icon">💡</span><div><strong>Daily insights</strong><br>Personalised recovery tips every day.</div></div>
+    </div>
+    <button class="btn-primary btn-full" onclick="completeOnboarding()">Let's go →</button>
+  </div>
+</div>
+
+<!-- PATIENT HOME -->
+<div id="view-patient-home" class="view">
+  <div class="home-wrap">
+    <div class="home-greeting">
+      <div>
+        <p id="greeting-text" class="greeting-text">Good morning</p>
+        <h2 id="patient-display-name" class="greeting-name">Sarah</h2>
+      </div>
+      <div class="recovery-pill" id="recovery-day">Day 5</div>
+    </div>
+
+    <div class="section-block">
+      <div class="section-row">
+        <span class="section-heading">Today's tips</span>
+        <button class="link-btn" onclick="switchTab('insights')">See all →</button>
+      </div>
+      <div id="teaser-scroll" class="teaser-scroll"></div>
+    </div>
+
+    <div id="checkin-prompt" class="checkin-card">
+      <div class="checkin-icon">📷</div>
+      <div class="checkin-card-body">
+        <strong>Take today's check-in</strong>
+        <p>Photo + 4 questions · ~90 seconds</p>
+      </div>
+      <button class="btn-primary" onclick="startCheckin()">Start</button>
+    </div>
+
+    <div id="checkin-done" class="checkin-done hidden">
+      <span>✔</span> Today's check-in complete
+    </div>
+
+    <div id="latest-result-card" class="latest-result hidden"></div>
+
+    <div class="section-block">
+      <p class="section-heading">Recovery timeline</p>
+      <div id="timeline-entries" class="timeline-entries"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CHECK-IN (photo + symptoms in one view, two sections) -->
+<div id="view-checkin-photo" class="view">
+  <div class="checkin-wrap">
+    <div class="checkin-stepper">
+      <div id="cs-photo" class="cs-step active">1 · Photo</div>
+      <div id="cs-symp" class="cs-step">2 · Symptoms</div>
+    </div>
+
+    <!-- Photo section -->
+    <div id="section-photo">
+      <h2 class="checkin-title">Wound photo</h2>
+      <p class="checkin-sub">Take a clear photo in good lighting.</p>
+      <div id="photo-frame" class="photo-frame" onclick="triggerPhoto()">
+        <div id="photo-placeholder" class="photo-ph">
+          <span style="font-size:2rem">📷</span>
+          <span>Tap to take photo</span>
+        </div>
+        <img id="photo-preview" class="photo-preview hidden" src="" alt="Wound preview">
+      </div>
+      <input type="file" id="photo-input" accept="image/*" capture="environment" class="hidden" onchange="handlePhoto(event)">
+      <button id="photo-next-btn" class="btn-primary btn-full" disabled onclick="showSymptoms()">Next: Symptoms →</button>
+      <button class="btn-ghost btn-full" onclick="switchTab('patient-home')">Cancel</button>
+    </div>
+
+    <!-- Symptoms section -->
+    <div id="section-symptoms" class="hidden">
+      <h2 class="checkin-title">How are you feeling?</h2>
+      <p class="checkin-sub">Answer honestly — there are no wrong answers. Takes about 90 seconds.</p>
+
+      <div class="symptom-group">
+        <p class="symptom-q">Fever or chills?</p>
+        <p class="symptom-hint">Temperature ≥ 38°C or feeling unusually hot/chills</p>
+        <div class="symptom-options" data-question="fever">
+          <button class="symptom-btn" data-value="no" onclick="selectSymptom(this)">No</button>
+          <button class="symptom-btn" data-value="yes" onclick="selectSymptom(this)">Yes</button>
+        </div>
+      </div>
+
+      <div class="symptom-group">
+        <p class="symptom-q">Wound drainage?</p>
+        <p class="symptom-hint">Fluid, oozing, or leaking from the incision site</p>
+        <div class="symptom-options" data-question="drainage">
+          <button class="symptom-btn" data-value="no" onclick="selectSymptom(this)">No</button>
+          <button class="symptom-btn" data-value="yes" onclick="selectSymptom(this)">Yes</button>
+        </div>
+      </div>
+
+      <div class="symptom-group">
+        <p class="symptom-q">Spreading redness?</p>
+        <p class="symptom-hint">Redness or warmth extending beyond the wound edge</p>
+        <div class="symptom-options" data-question="erythema">
+          <button class="symptom-btn" data-value="no" onclick="selectSymptom(this)">No</button>
+          <button class="symptom-btn" data-value="yes" onclick="selectSymptom(this)">Yes</button>
+        </div>
+      </div>
+
+      <div class="symptom-group">
+        <p class="symptom-q">Pain level today?</p>
+        <div class="symptom-options" data-question="pain">
+          <button class="pain-btn" data-value="none" onclick="selectPain(this)">None</button>
+          <button class="pain-btn" data-value="mild" onclick="selectPain(this)">Mild</button>
+          <button class="pain-btn" data-value="moderate" onclick="selectPain(this)">Moderate</button>
+          <button class="pain-btn" data-value="severe" onclick="selectPain(this)">Severe</button>
+        </div>
+      </div>
+
+      <button id="symptoms-submit-btn" class="btn-primary btn-full" disabled onclick="submitCheckin()">Submit &amp; analyse →</button>
+      <button class="btn-ghost btn-full" onclick="showPhoto()">← Back to photo</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULT -->
+<div id="view-result" class="view">
+  <div class="result-wrap">
+    <div id="analyzing-state" class="analyzing-state">
+      <div class="spinner"></div>
+      <h2>Our AI is reviewing your wound photo and symptoms</h2>
+      <div class="analysis-steps">
+        <div class="analysis-step" id="step-1"><span>🔍</span> Analysing wound image</div>
+        <div class="analysis-step" id="step-2"><span>📊</span> Reviewing symptom data</div>
+        <div class="analysis-step" id="step-3"><span>⚕️</span> Generating risk score</div>
+      </div>
+    </div>
+
+    <div id="result-card" class="result-card hidden">
+      <p class="result-day-label">Day <span id="result-day-num">5</span> check-in</p>
+      <div class="score-ring-wrap">
+        <svg viewBox="0 0 120 120" width="140" height="140">
+          <circle cx="60" cy="60" r="50" fill="none" stroke="var(--color-border)" stroke-width="10"/>
+          <circle id="score-ring-arc" cx="60" cy="60" r="50" fill="none" stroke="#0b7a82" stroke-width="10"
+            stroke-dasharray="314" stroke-dashoffset="314" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+        </svg>
+        <div class="score-center">
+          <span id="result-score" class="result-score-num">0</span>
+          <span class="result-score-denom">/100</span>
+        </div>
+      </div>
+      <div id="result-status-badge" class="result-badge">Clear</div>
+      <h3 id="result-headline" class="result-headline"></h3>
+      <p id="result-message" class="result-msg"></p>
+      <div id="breakdown-items" class="breakdown-items"></div>
+      <div id="result-action" class="result-action"></div>
+      <button class="btn-primary btn-full" onclick="goHome()">Back to home</button>
+    </div>
+  </div>
+</div>
+
+<!-- INSIGHTS -->
+<div id="view-insights" class="view">
+  <div class="insights-wrap">
+    <h2 class="view-title">Recovery Insights</h2>
+    <div id="insights-filters" class="filter-row"></div>
+    <div id="insights-grid" class="insights-grid"></div>
+  </div>
+</div>
+
+<!-- SHORTS PLAYER -->
+<div id="view-shorts" class="view">
+  <div id="shorts-player"></div>
+</div>
+
+<!-- CLINICIAN DASHBOARD -->
+<div id="view-clinician-dashboard" class="view">
+  <div class="clinician-wrap">
+    <h2 class="view-title">Post-Caesarean Ward — Active Patients</h2>
+    <div id="patient-rows" class="patient-rows"></div>
+  </div>
+</div>
+
+<!-- PATIENT DETAIL -->
+<div id="view-patient-detail" class="view">
+  <div class="detail-wrap">
+    <button class="back-btn" onclick="switchTab('clinician-dashboard')">← Back</button>
+    <h2 id="detail-patient-name" class="detail-name"></h2>
+    <div id="detail-badge" class="detail-badge"></div>
+    <div id="detail-content" class="detail-content"></div>
+  </div>
+</div>
+
+<!-- BOTTOM TAB BAR -->
+<nav id="bottom-tab-bar" class="bottom-tab-bar hidden">
+  <button id="tab-home" class="tab-btn active" onclick="switchTab('patient-home')">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+    <span>Home</span>
+  </button>
+  <button id="tab-insights" class="tab-btn" onclick="switchTab('insights')">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/><path d="M12 8v4l3 3"/></svg>
+    <span>Insights</span>
+  </button>
+  <button id="tab-clinician" class="tab-btn" onclick="switchTab('clinician-dashboard')">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+    <span>Clinical</span>
+  </button>
+</nav>
+
+<script src="insights.js"></script>
+<script src="app.js"></script>
+<script>
+function showSymptoms() {
+  document.getElementById('section-photo').classList.add('hidden');
+  document.getElementById('section-symptoms').classList.remove('hidden');
+  document.getElementById('cs-photo').classList.remove('active');
+  document.getElementById('cs-symp').classList.add('active');
+  window.scrollTo(0,0);
+}
+function showPhoto() {
+  document.getElementById('section-symptoms').classList.add('hidden');
+  document.getElementById('section-photo').classList.remove('hidden');
+  document.getElementById('cs-symp').classList.remove('active');
+  document.getElementById('cs-photo').classList.add('active');
+  window.scrollTo(0,0);
+}
+(function(){
+  const r = document.documentElement;
+  const btn = document.querySelector('[data-theme-toggle]');
+  let d = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+  r.setAttribute('data-theme', d);
+  if (btn) btn.addEventListener('click', () => { d = d==='dark'?'light':'dark'; r.setAttribute('data-theme',d); });
+})();
+</script>
 </body>
 </html>
